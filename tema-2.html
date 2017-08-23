@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tema 2 - Curs Javascript</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function showMessage (message) 
+				{
+
+					console.log(message);
+				}
+			var phrase = 'Astazi este o zi potrivita pentru stiinta'
+			showMessage(phrase);
+
+			//a
+			var message = 'Numarul de caractere este: ' + phrase.length;
+			showMessage(message);
+
+			//b
+			message = 'Nr de caractere diferite de spatiu: ' + (phrase.replace(/ /g,'')).length; 
+			showMessage(message);
+
+			//c
+			var posFirstSpace = phrase.indexOf(' ');
+			var firstWord = phrase.substring(0, posFirstSpace);
+			showMessage('Primul cuvant cu litere mari este: ' + firstWord.toUpperCase());
+
+			//d
+			phrase = phrase.replace(firstWord, 'Word');
+			showMessage(phrase);
+
+			//e
+			message = phrase.substring(phrase.lastIndexOf(' '), phrase.length);
+			showMessage('Ultimul cuvant din string este: ');
+
+			//f
+			posFirstSpace = phrase.indexOf(' ');
+			var posSecondSpace = phrase.indexOf(' ', posFirstSpace + 1);
+			var secondWord = phrase.substring(posFirstSpace + 1, posSecondSpace);
+			phrase = phrase.replace(secondWord + ' ', '');
+			showMessage(phrase);
+
+		</script>
+	</body>
+</html>
