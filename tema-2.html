@@ -4,6 +4,15 @@
 		<title>Tema 2 - Curs Javascript</title>
 	</head>
 	<body>
+	<p>Intr-un script dintr-o pagina html declarati si initializati o variabila de tip string in care sa puneti o propozitie formata din minim 5 cuvinte fara semne de punctuatie (puteti sa folositi lorem ipsum generator, vezi http://www.lipsum.com ;-)).</p>
+	<ul list-style-type="none";>
+		<li>a.     Afisati numarul de caractere din string.</li>
+		<li>b.     Afisati numarul de caractere diferite de spatiu din string.</li>
+		<li>c.      Afisati cu litere mari primul cuvant din string.</li>
+		<li>d.     Inlocuiti primul cuvant cu stringul 'word'.</li>
+		<li>e.     Afisati ultimul cuvant din string.</li>
+		<li>f.      Stergeti al doilea cuvant din string.</li>
+	</ul>
 		<script type="text/javascript">
 			function showMessage (message) 
 				{
@@ -32,7 +41,7 @@
 
 			//e
 			message = phrase.substring(phrase.lastIndexOf(' '), phrase.length);
-			showMessage('Ultimul cuvant din string este: ');
+			showMessage('Ultimul cuvant din string este: ' + message);
 
 			//f
 			posFirstSpace = phrase.indexOf(' ');
