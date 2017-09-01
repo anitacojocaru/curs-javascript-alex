@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+    <script type="text/javascript">
+        function createMessage(duration, firmName)
+        {
+            var msg = 'Eu sunt angajata de ' + duration + ' ' + (duration > 1 ? 'ani' : 'an') + ' in ' + firmName + '!';
+
+            return msg;
+        }
+
+        function showMessage(message)
+        {
+            
+            //console.log(message);
+            document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br/>' + message;
+        }
+
+        var firstName = 'Anita';
+        var lastName = 'Cojocaru';
+        showMessage(firstName);
+        showMessage(lastName);
+        showMessage(firstName + ' ' + lastName);
+        console.log(firstName, lastName, 'abc', 123);
+
+        var city = 'Brasov';
+        showMessage('Numele meu este ' + firstName + ' ' + lastName + ' si sunt din ' + city + '!');
+
+        var firm = 'Projects Abroad';
+        var duration = 4;
+        showMessage('Eu sunt angajat de ' + duration + ' ani in ' + firm + '!');
+
+        showMessage('Eu sunt angajat de ' + duration + ' ' + (duration > 1 ? 'ani' : 'an') + ' in ' + firm + '!');
+
+        var message = createMessage(duration, firm);
+
+        showMessage(message);
+
+        duration++;
+        message = createMessage(duration, firm);
+        showMessage(message);
+
+        showMessage('John Doe'.length);
+        showMessage(message.length);
+        showMessage('John Snow'.replace('John','Ion').replace('Snow', "Nea"));
+        showMessage(message.replace('sunt angajata', 'lucrez'));
+        showMessage(message.replace(duration, duration * 2));
+        showMessage('John Snow'.substr(0, 3));
+        showMessage('John Snow'.substring(3, 7));
+        showMessage(message.substr(10, 5));
+        showMessage(firm.toUpperCase());
+        showMessage('>' + '     abc        '.trim() + '<');
+
+        var phrase = 'Vaca este un animal extraordinar de inteligent.';
+        showMessage(phrase.indexOf('aca'));
+        showMessage('John Doe'.indexOf('o', 5));
+
+        showMessage(phrase.indexOf(' '));
+        showMessage(phrase.substring(0, 4));
+
+        var posFirstSpace = phrase.indexOf(' ');
+        showMessage(phrase.substring(0, posFirstSpace));
+
+        var posSecondSpace = phrase.indexOf(' ', posFirstSpace + 1);
+        var secondWord = phrase.substring(posFirstSpace, posSecondSpace);
+        showMessage(secondWord);
+    </script>
+</body>
+</html>
