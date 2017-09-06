@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tema 4</title>
+</head>
+<body>
+    <p>Declarati si initializati o variabila care sa contina un cuvant. Scrieti un script care sa verifice daca acel cuvant este palindrom (citit invers este la fel cu cuvantul initial)</p>
+    <div id="container"></div>
+	<script>
+
+        function show(message)
+        {
+            document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message;
+        }
+        
+        //A Toyota’s a Toyota - palindrom
+        //A Toyota’s not a BMW - varianta ne-palindrom
+
+        var text = 'A Toyota’s a Toyota';
+        show(text);
+
+       function ePalindrom(str)
+            {
+                str = str.toLowerCase().replace(/([^a-zA-Z])/g,'');
+                if (str == str.split("").reverse().join("")){
+
+                    show('Ai nimerit! E palindrom!' + '<br>');
+
+                } else {
+
+                    show('Acesta nu este un palindrom. Mai incearca!' + '<br>');
+
+                      }
+
+                }
+
+            ePalindrom(text);
+        
+	</script>
+</body>
+</html>

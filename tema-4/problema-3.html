@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tema 4</title>
+</head>
+<body>
+    <p>Declarati si initializati o variabila care sa contina un cuvant. Scrieti un script care sa inlocuiasca fiecare litera cu urmatoarea litera din alfabet. Fiecare litera din alfabet are un cod: 'A' -> 65, 'B' -> 66, etc, 'a' -> 97, 'b' -> 98, etc. Pentru rezolvarea problemei se vor folosi String.fromCharCode(number) si character.charCodeAt(0). </p>
+    <div id="container"></div>
+	<script>
+
+        function show(message)
+        {
+            document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message;
+        }
+        
+        var text = 'cdefz';
+        text = text.replace(/\s+/g, '');
+
+        show('Textul introdus este: ' + text + '<br />');
+
+        function nextLetter(string) {
+            var next = '';
+
+            for (i = 0; i < string.length; i++) {
+                if (string.charCodeAt(i) == 90) {
+                    next += 'A';
+                } else if (string.charCodeAt(i) == 122) {
+                    next += "a";
+                } else {
+                    next += String.fromCharCode(string.charCodeAt(i) + 1);
+                }
+            }
+
+            show('Textul inlocuit este: ' + next);
+        }
+
+        nextLetter(text);
+
+	</script>
+</body>
+</html>

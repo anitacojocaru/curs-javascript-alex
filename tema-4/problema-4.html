@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tema 4</title>
+</head>
+<body>
+    <p>Scrieti un script care sa ceara utilizatorului sa introduca un timp, format din ore, minute si secunde (citite pe rand folosind functia prompt()). Dupa acest pas veti avea trei variabile: hours, minutes, seconds. Calculati care este timpul mai mare cu o secunda fata de cel introdus de utilizator.</p>
+    <div id="container"></div>
+	<script>
+
+        function show(message)
+        {
+            document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message;
+        }
+        
+        var hours = prompt('Introdu orele: ');
+        if (isNaN(hours)) {
+             show('Valorile trebuie sa fie numerice!');
+        }
+        if (hours > 24 || hours < 00 ) {
+            show('Valorile introduse trebuie sa fie numerice intre 00 si 24');
+        } else {
+            show(hours + ' h');
+        }
+
+        var minutes = prompt('Introdu minutele: ');
+        if (isNaN(minutes)) {
+             show('Valorile trebuie sa fie numerice!');
+        }
+        if (minutes > 60 || minutes < 00 ) {
+            show('Valorile introduse trebuie sa fie numerice intre 00 si 60');
+        } else {
+            show(minutes + ' min');
+        }
+
+        var seconds = prompt('Introdu secundele: ');
+        if (isNaN(seconds)) {
+             show('Valorile trebuie sa fie numerice!');
+        }
+        if (seconds > 60 || seconds < 00 ) {
+            show('Valorile introduse trebuie sa fie numerice intre 00 si 60');
+        } else {
+            show(seconds + ' sec');
+        }
+
+        function addOneSec(string){
+
+            var newTime = '';
+        }
+        
+        addOneSec(newTime);
+      
+	</script>
+</body>
+</html>

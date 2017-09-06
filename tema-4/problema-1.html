@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tema 4</title>
+</head>
+<body>
+    <p>Scrieti un script care sa aiba 5 variabile, fiecare continand un numar intreg (pozitiv sau negativ). Afisati numarul maxim.</p>
+    <div id="container"></div>
+	<script>
+
+        function show(message)
+        {
+            document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message;
+        }
+        
+        var a = 3482;
+        var b = 3340;
+        var c = -3346;
+        var d = -3347;
+        var e = 3943;
+
+        show('Numerele sunt: ' + a + '; ' + b + '; ' + c + '; ' + d + '; ' + e + '<br>');
+
+        var maxNumber = Math.max(a, b, c, d, e);
+        show('Numarul cel mai mare este: ' + maxNumber + '<br>');
+        
+	</script>
+</body>
+</html>
