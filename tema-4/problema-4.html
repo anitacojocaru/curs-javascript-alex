@@ -17,8 +17,8 @@
         if (isNaN(hours)) {
              show('Valorile trebuie sa fie numerice!');
         }
-        if (hours > 24 || hours < 00 ) {
-            show('Valorile introduse trebuie sa fie numerice intre 00 si 24');
+        if (hours > 23 || hours < 00 ) {
+            show('Valorile introduse trebuie sa fie numerice intre 00 si 23');
         } else {
             show(hours + ' h');
         }
@@ -27,8 +27,8 @@
         if (isNaN(minutes)) {
              show('Valorile trebuie sa fie numerice!');
         }
-        if (minutes > 60 || minutes < 00 ) {
-            show('Valorile introduse trebuie sa fie numerice intre 00 si 60');
+        if (minutes > 59 || minutes < 00 ) {
+            show('Valorile introduse trebuie sa fie numerice intre 00 si 59');
         } else {
             show(minutes + ' min');
         }
@@ -37,8 +37,8 @@
         if (isNaN(seconds)) {
              show('Valorile trebuie sa fie numerice!');
         }
-        if (seconds > 60 || seconds < 00 ) {
-            show('Valorile introduse trebuie sa fie numerice intre 00 si 60');
+        if (seconds > 59 || seconds < 00 ) {
+            show('Valorile introduse trebuie sa fie numerice intre 00 si 59');
         } else {
             show(seconds + ' sec');
         }
